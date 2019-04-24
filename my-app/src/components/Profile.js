@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import user from '../products.json';
+//import user from '../products.json';
 
-const Profile = ({ name, tag, location, avatar, stats }) => (
+const Profile = ({ user: { name, tag, location, avatar, stats } }) => (
   <div>
     <div>
-      <img src={user.avatar} alt="user avatar" height={200} />
-      <p>{user.name}</p>
-      <p>{user.tag}</p>
-      <p>{user.location}</p>
+      <img src={avatar} alt="user avatar" height={200} />
+      <p>{name}</p>
+      <p>{tag}</p>
+      <p>{location}</p>
     </div>
 
     <ul>
