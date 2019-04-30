@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import user from './products.json';
-import Profile from './components/Profile';
+import App from './components/App';
 
-ReactDOM.render(<Profile user={user} />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

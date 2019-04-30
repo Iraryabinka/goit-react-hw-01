@@ -14,15 +14,15 @@ const Profile = ({ user: { name, tag, location, avatar, stats } }) => (
     <ul>
       <li>
         <span>Followers </span>
-        <span>{}</span>
+        <span>{stats.followers}</span>
       </li>
       <li>
         <span>Views </span>
-        <span>{}</span>
+        <span>{stats.views}</span>
       </li>
       <li>
         <span>Likes </span>
-        <span>{}</span>
+        <span>{stats.likes}</span>
       </li>
     </ul>
   </div>
@@ -33,11 +33,11 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  name: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.number.isRequired,
+  stats: PropTypes.number,
 };
 
 export default Profile;
