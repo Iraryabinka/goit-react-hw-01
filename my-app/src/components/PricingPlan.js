@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PricingItem = ({
-  items: { label, icon, capacity, price, description },
-}) => (
+const PricingItem = ({ label, icon, capacity, price, description }) => (
   <div>
     <i>{icon}</i>
     <h2>{label}</h2>
@@ -27,11 +25,16 @@ const PricingPlan = ({ items = [] }) => (
 );
 
 PricingItem.propTypes = {
-  label: PropTypes.string,
-  icon: PropTypes.string,
-  capacity: PropTypes.number,
-  price: PropTypes.number,
-  description: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      icon: PropTypes.string,
+      capacity: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default PricingPlan;
