@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import pricingPlanItems from '../pricing-plan.json';
 
 const PricingItem = ({
-  pricingPlanItems: { label, icon, capacity, price, description },
+  items: { label, icon, capacity, price, description },
 }) => (
   <div>
     <i>{icon}</i>
@@ -35,4 +34,4 @@ PricingItem.propTypes = {
   description: PropTypes.string,
 };
 
-export default PricingItem;
+export default PricingPlan;
