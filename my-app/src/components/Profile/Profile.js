@@ -5,12 +5,7 @@ import style from './Profile.module.css';
 const Profile = ({ user: { name, tag, location, avatar, stats } }) => (
   <div className={style.profile}>
     <div className={style.description}>
-      <img
-        className={style.avatar}
-        src={avatar}
-        alt="user avatar"
-        height={200}
-      />
+      <img className={style.avatar} src={avatar} alt="user avatar" />
       <p className={style.name}>{name}</p>
       <p className={style.tag}>{tag}</p>
       <p className={style.location}>{location}</p>
@@ -38,11 +33,11 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  name: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.number.isRequired,
 };
 
 export default Profile;
